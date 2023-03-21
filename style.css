@@ -1,0 +1,732 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto/Roboto-Light.ttf);
+}
+
+@-webkit-keyframes block_extension {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
+@keyframes block_extension {
+0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+}
+
+
+@-webkit-keyframes card_pop_up_top {
+0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+}
+100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+}
+@keyframes card_pop_up_top {
+0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+}
+100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+}
+
+@-webkit-keyframes moving {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+              transform: translate(-5px, 5px);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+              transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+              transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+              transform: translate(5px, -5px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+@keyframes moving {
+    0% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+      }
+      20% {
+        -webkit-transform: translate(-5px, 5px);
+                transform: translate(-5px, 5px);
+      }
+      40% {
+        -webkit-transform: translate(-5px, -5px);
+                transform: translate(-5px, -5px);
+      }
+      60% {
+        -webkit-transform: translate(5px, 5px);
+                transform: translate(5px, 5px);
+      }
+      80% {
+        -webkit-transform: translate(5px, -5px);
+                transform: translate(5px, -5px);
+      }
+      100% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+      }
+    }
+
+@-webkit-keyframes product_title {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px) translateY(-500px);
+                transform: translateZ(-700px) translateY(-500px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+                transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+    }
+@keyframes product_title {
+0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+}
+40% {
+    opacity: 0.6;
+}
+100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+}
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto';
+    background-color: #F5F5F5;
+}
+
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
+header{
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+
+footer{
+    background-color: #316099;
+    color: #ffffff;
+}
+
+button:hover{
+    -webkit-animation: block_extension 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: block_extension 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    cursor: pointer;
+}
+
+.wrap{
+    max-width: 1366px;
+    margin: 0px auto;
+}
+
+.blue_text{
+    color: #1F3F68;
+}
+
+.h2{
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+}
+
+
+/* HEADER */
+
+.head_block{
+    padding: 42px 113px 60px 113px;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch_on_btn{
+    border: none;
+    background-color: #F5F5F5;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 116px;
+}
+
+
+.product_title{
+    font-weight: 300px;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+    display: block;
+    max-width: 510px;
+    -webkit-animation: product_title 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: product_title 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.product_descr{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    display: block;
+    max-width: 425px;
+    margin-bottom: 86px;
+}
+
+.btn_to_go_to_our_projects{
+    width: 220px;
+    height: 56px;
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    border-color: #5A98D0;
+
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em; 
+}
+
+.product_illustration{
+    -webkit-animation: moving 10s linear infinite both;
+	        animation: moving 10s linear infinite both;
+}
+
+
+
+/* WHAT WE DO */
+
+.what_we_do_block{
+    padding: 46px 0 35px 0;
+}
+
+.what_we_do_title{
+    text-align: center;
+    margin-bottom: 66px;
+}
+
+.what_we_do_list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.what_we_do_item{
+    list-style-type: none;
+}
+
+.what_we_do_card{
+    width: 430.17px;
+    min-height: 494.9px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+
+    margin-bottom: 32px;
+}
+
+.what_we_do_card:hover{
+    -webkit-animation: card_pop_up_top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: card_pop_up_top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.what_we_do_card_items{
+    padding: 46px 39px 0 39px;
+}
+
+.what_we_do_img{
+    text-align: center;
+    padding-right: 25px;
+    margin-bottom: 52px;
+}
+
+.what_we_do_card_title{
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;    
+}
+
+.what_we_do_card_descr{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    display: block;
+    max-width: 322px;
+    min-height: 98px;
+    margin-bottom: 30px;
+}
+
+
+.what_we_do_card_link,
+.what_we_do_card_link:hover,
+.what_we_do_card_link:active{
+    color:#1F3F68;
+    cursor: pointer;
+}
+
+
+
+/* FINISHED PROJECTS */
+
+.finished_projects{
+    padding: 35px 0 107px 0;
+}
+
+.finished_projects_title{
+    text-align: center;
+    margin-bottom: 33px;
+}
+
+.finished_projects_text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    display: block;
+    max-width: 900px;
+    margin: 0 auto 67px auto;
+}
+
+
+.container_for_big_img{
+    position: relative;
+    margin-bottom: 33px;
+}
+
+.container_for_big_img:hover{
+    -webkit-animation: block_extension 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: block_extension 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.projects_img{
+    width: 100%;
+}
+
+.title_of_big_img{
+    position: absolute;
+    right: 77px;
+    top: 66px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: right;
+    letter-spacing: 0.05em;
+}
+
+.small_imgs_of_finished_projects{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_for_small_img{
+    position: relative;
+}
+
+.left_small_img{
+    margin-right: 16.5px;
+}
+
+.right_small_img{
+    margin-left: 16.5px;
+}
+
+.container_for_small_img:hover{
+    -webkit-animation: block_extension 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: block_extension 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.title_of_small_img{
+    position: absolute;
+    left: 38px;
+    top: 33px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+
+
+/* LETS WORK WITH US */
+
+.lets_work_with_us{
+    background-color: #316099;
+    margin: 0px auto;
+}
+
+.job_offer_container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 91px;
+    padding-left: 113px;
+    padding-bottom: 96px;
+    padding-right: 113px;
+}
+
+.job_offer_text{
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.job_offer_title{
+    margin-bottom: 32px;
+    display: block;
+    width: 341px;
+}
+
+.job_offer_descr{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    display: block;
+    width: 495px;
+}
+
+.offer_button_container{
+    display: flex;
+    align-items: center;
+}
+
+.btn_to_go_to_our_offers{
+    width: 236.63px;
+    height: 56px;
+    background: #5A98D0;
+    border: none;
+
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+
+
+/* FOOTER */
+
+.footer_line{
+    opacity: 0.4;
+    border-top: 1px solid #fff;
+}
+
+.footer_block{
+    padding: 64px 113px 38px 113px;
+}
+
+.contacts_list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.contacts_list li{
+    max-width: 317px;
+    margin-left: 16px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+}
+
+.contacts_item{
+    margin-left: 20px;
+}
+
+.contacts_item a,
+.contacts_item a:hover,
+.contacts_item a:active{
+    color: #fff
+}
+
+.copy_text{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    opacity: 0.4;
+}
+
+
+
+/* Заменяю плавающую картинку на фон 
+   Располагаю карточки по центру
+   (в этот момент они начинают вылезать за границы)
+*/
+
+@media(max-width: 1416px){
+    .head_block{
+        background-image: url(img/product_illustration.png);
+        background-repeat: no-repeat;
+        background-position: bottom 25px right 150px;
+        background-size: 40%;
+    }
+
+    .product_illustration{
+        display: none;
+    }
+
+    .what_we_do_list{
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+    }
+}
+
+
+/* Заново позиционирую бэкграунд, т.к. начинает съезжать
+   Контакты располагаю по вертикали */
+
+@media(max-width: 1127px){
+    .head_block{
+        background-position: bottom 25px right 100px;
+        background-size: 40%;
+    }
+
+    .contacts_list{
+        flex-direction: column;
+    }
+
+    .job_offer_descr{
+        max-width: 340px;
+    }
+}
+
+
+@media(max-width: 857px){
+    .head_block{
+        background-position: right 270px;
+        background-size: 50%;
+
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 64px;
+}
+}
+
+
+@media(max-width: 768px){
+    .head_block{
+        background-position: right 350px;
+        background-size: 50%;
+    }
+
+    .what_we_do_block{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .what_we_do_list{
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+    }
+
+    .what_we_do_card{
+        width: 335px;
+        height: 448px;
+    }
+
+    .finished_projects{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .job_offer_container{
+        padding-bottom: 64px;
+    }
+
+    .btn_to_go_to_our_offers{
+        width: 133.04px;
+        height: 31.48px;
+    }
+}
+
+
+@media(max-width: 741px){
+    .job_offer_container{
+        justify-content: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job_offer_text{
+        text-align: center;
+    }
+
+    .container_for_big_img{
+        margin-bottom: 16.58px;
+    }
+
+    .small_imgs_of_finished_projects{
+        flex-direction: column;
+    }
+
+    .title_of_big_img{
+        right: 16px;
+        top: 16px;
+    }
+
+    .title_of_small_img{
+        left: 16px;
+        top: 16px;
+    }
+
+    .left_small_img{
+        margin-right: 0;
+        margin-bottom: 16.58px;
+    }
+
+    .right_small_img{
+        margin-left: 0;
+    }
+
+    .footer_block{
+        padding: 32px 0 0 16px;
+    }
+
+    .contacts_list{
+        margin-bottom: 10px;
+    }
+
+    .contacts_list li{
+        margin-bottom: 23px;
+    }
+}
+
+
+@media(max-width: 380px){
+    .head_block{
+        background-image: none;
+    }
+
+    .h2{
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .product_title_block{
+        text-align: center;
+    }
+
+    .product_title{
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .product_descr{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .btn_to_go_to_our_projects{
+        width: 108px;
+        height: 27px;
+
+        font-size: 12px;
+    }
+
+    .title_of_big_img{
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .title_of_small_img{
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .btn_to_go_to_our_offers{
+        width: 108px;
+        height: 31px;
+    }
+
+    .footer_block{
+        padding: 32px 0 0 16px;
+    }
+
+    .contacts_list{
+        margin-bottom: 10px;
+    }
+
+    .contacts_list li{
+        margin-bottom: 17px;
+    }
+
+    .copy_text{
+        text-align: center;
+    }
+}
